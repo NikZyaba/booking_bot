@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/booking_bot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
+    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Добавил запросы, исправил очепятки">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NikZyaba"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NikZyaba/booking_bot.git",
+    "accountId": "4df6fb5f-674c-4c90-963a-74e0b22757ca"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -65,6 +69,19 @@
       <option name="presentableId" value="Default" />
       <updated>1770528333878</updated>
     </task>
+    <task id="LOCAL-00001" summary="Объявил БД, создал модели и часть запросов к ним">
+      <option name="closed" value="true" />
+      <created>1771136796291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771136796291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Объявил БД, создал модели и часть запросов к ним" />
+    <option name="LAST_COMMIT_MESSAGE" value="Объявил БД, создал модели и часть запросов к ним" />
   </component>
 </project>
