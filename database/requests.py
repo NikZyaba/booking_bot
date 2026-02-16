@@ -133,3 +133,28 @@ async def get_user_with_orders(telegram_id: int) -> Optional[User]:
         result = await session.execute(
             select(User).where(User.telegram_id == telegram_id).options(selectinload(User.orders)))
         return result.scalar_one_or_none()
+
+async def get_available_seats() -> List[Seat]:
+    """Получаем все свободные места"""
+    async with AsyncSessionFactory() as session:
+        result = await session.execute(select(Seat).where(Seat.is_booked == False))
+        return list(result.scalars().all())
+
+async def is_seat_booked(seat_id:int) -> bool:
+    """Проверяем, забронировано-ли место"""
+    seat = await get_seat_by_id(seat_id)
+    return seat.is_booked if seat else False
+
+
+async def delete_order(order_id: int) -> bool:
+    """Удаляет заказ по ID. Если успешно, то возвращает True"""
+    async with AsyncSessionFactory() as session:
+        result = await session.execute(select(Order).where(Order.id == order_id))
+        order = result.scalar_one_or_none()
+        if order:
+            await session.delete(order)
+            await session.commit()
+            return True
+        return False
+
+
