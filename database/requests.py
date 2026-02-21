@@ -157,4 +157,10 @@ async def delete_order(order_id: int) -> bool:
             return True
         return False
 
+async def get_user_active_orders(user_id:int) -> List[Order]:
+    """Получает все активные заказы пользователей"""
+    async with AsyncSessionFactory() as session:
+        result = await session.execute(select(Order).where(Order.user_id == user_id, Order.status.in_(["pending", "confirmed"])))
+        return list(result.scalars().all())
+
 
