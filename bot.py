@@ -4,6 +4,7 @@ import os
 from aiogram import Dispatcher, Bot
 from aiogram.fsm.storage.memory import MemoryStorage
 from dotenv import load_dotenv
+from pyexpat.errors import messages
 
 # 1. Загружаем переменные окружения
 load_dotenv()
@@ -16,7 +17,22 @@ async def main():
     bot = Bot(token=os.getenv("TOKEN"))
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
-    print("Бот запущен")
+    print("Бот готов к запуску")
+
+    try:
+        # Блок с регистрацией роутеров
+        from handlers.start import router as start_router
+
+
+        dp.include_router(start_router)
+
+
+        print("______________Роутеры зарегистрированы____________________")
+    except Exception as e:
+        return f"Произошла ошибка при загрузке роутеров {e}"
+
+
+
     await dp.start_polling(bot)
 
 
