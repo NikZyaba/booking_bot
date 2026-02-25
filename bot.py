@@ -1,10 +1,11 @@
 import asyncio
 import os
+from time import sleep
 
 from aiogram import Dispatcher, Bot
 from aiogram.fsm.storage.memory import MemoryStorage
 from dotenv import load_dotenv
-from pyexpat.errors import messages
+import time
 
 # 1. Загружаем переменные окружения
 load_dotenv()
@@ -22,17 +23,21 @@ async def main():
     try:
         # Блок с регистрацией роутеров
         from handlers.start import router as start_router
+        from handlers.callbacks import router as callbacks_router
 
 
         dp.include_router(start_router)
+        dp.include_router(callbacks_router)
 
-
+        # Ставим время сна для отладки процессов (режим разработки)
+        time.sleep(1)
         print("______________Роутеры зарегистрированы____________________")
     except Exception as e:
         return f"Произошла ошибка при загрузке роутеров {e}"
 
-
-
+    # Ставим время сна для отладки процессов (режим разработки)
+    time.sleep(1)
+    print("______________Бот запущен____________________")
     await dp.start_polling(bot)
 
 
