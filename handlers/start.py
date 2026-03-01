@@ -20,7 +20,7 @@ async def cmd_start(message:types.Message):
         "/my_orders - мои заказы\n"
         "/make_order - забронировать новое место\n"
     )
-    # Потом будет клавиатура для меню----------------------↓
+
     await message.answer(text=welcome_text, reply_markup=get_main_menu())
 
 
@@ -35,5 +35,5 @@ async def cmd_help(message:types.Message):
         "/seat_by_date - показать места по дате\n"
         "Пока многие функции находятся в разработке"
     )
-    # Потом будет клавиатура для меню-------------------↓
+
     await message.answer(text=help_text, reply_markup=get_main_menu())
