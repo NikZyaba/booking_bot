@@ -58,7 +58,7 @@ class Seat(Base):
     is_booked: Mapped[bool] = mapped_column(Boolean, default=False)
 
     # Связь между заказами
-    orders: Mapped[list["Order"]] = relationship("Order", back_populates="seats", cascade="all, delete-orphan")
+    orders: Mapped[list["Order"]] = relationship("Order", back_populates="seat", cascade="all, delete-orphan")
 
 
 class Order(Base):
