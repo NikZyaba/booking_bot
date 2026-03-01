@@ -11,8 +11,9 @@ from dotenv import load_dotenv
 
 # Формат URL: postgresql+asyncpg://user:password@host:port/dbname
 load_dotenv()
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_async_engine(
-    url=os.getenv("DATABASE_URL"),
+    url=DATABASE_URL,
     echo=True  # Для отладки SQL запросов
 )
 
@@ -44,7 +45,7 @@ class User(Base):
     date_registry: Mapped[Date] = mapped_column(Date, nullable=True)
 
     # Связь между заказами
-    orders: Mapped[list["Order"]] = relationship("Order", back_populates="user", cascade="all delete-orphan")
+    orders: Mapped[list["Order"]] = relationship("Order", back_populates="user", cascade="all, delete-orphan")
 
 
 class Seat(Base):
@@ -57,7 +58,7 @@ class Seat(Base):
     is_booked: Mapped[bool] = mapped_column(Boolean, default=False)
 
     # Связь между заказами
-    orders: Mapped[list["Order"]] = relationship("Order", back_populates="seats", cascade="all delete-orphan")
+    orders: Mapped[list["Order"]] = relationship("Order", back_populates="seats", cascade="all, delete-orphan")
 
 
 class Order(Base):
