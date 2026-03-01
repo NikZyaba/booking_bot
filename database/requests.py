@@ -4,7 +4,7 @@ from datetime import date
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from models import User, AsyncSessionFactory, Seat, Order
+from database.models import User, AsyncSessionFactory, Seat, Order
 
 
 # ------------------------ Работа с USER ------------------------ #
