@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Добавил запросы, исправил очепятки">
+    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Исправил ошибку в связях">
+      <change afterPath="$PROJECT_DIR$/handlers/seats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keyboards/seats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/callbacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/main_menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "NikZyaba"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NikZyaba&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/NikZyaba/booking_bot.git",
-    "accountId": "4df6fb5f-674c-4c90-963a-74e0b22757ca"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NikZyaba/booking_bot.git&quot;,
+    &quot;accountId&quot;: &quot;4df6fb5f-674c-4c90-963a-74e0b22757ca&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -77,11 +81,165 @@
       <option name="project" value="LOCAL" />
       <updated>1771136796291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Работа над запросами в БД">
+      <option name="closed" value="true" />
+      <created>1771258946149</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771258946149</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Работа над запросами в БД">
+      <option name="closed" value="true" />
+      <created>1771266218707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771266218707</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавил запрос на активные заказы и прописал запуск бота">
+      <option name="closed" value="true" />
+      <created>1771653751356</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771653751356</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Начало работы над командами бота">
+      <option name="closed" value="true" />
+      <created>1771762917757</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771762917757</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Указываем модули">
+      <option name="closed" value="true" />
+      <created>1772039182332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772039182332</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавил для отладки время сна, добавил новый роутер для обработки запроса кнопки &quot;Помощь&quot;">
+      <option name="closed" value="true" />
+      <created>1772039366600</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772039366600</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Создал файл для обработки запросов с помощью кнопки">
+      <option name="closed" value="true" />
+      <created>1772039456578</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772039456578</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Создал клавиатуру главного меню">
+      <option name="closed" value="true" />
+      <created>1772039494221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772039494221</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавил команду help">
+      <option name="closed" value="true" />
+      <created>1772039532175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772039532175</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Работа с БД, добавил в проект миграции БД">
+      <option name="closed" value="true" />
+      <created>1772382229463</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1772382229463</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Исправил ошибки &quot;,&quot; -  в строках с зависимостями между таблицами">
+      <option name="closed" value="true" />
+      <created>1772382305665</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1772382305665</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Убрал ненужные комментарии">
+      <option name="closed" value="true" />
+      <created>1772382332891</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1772382332891</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Переписал файл. Сделал НОРМАЛЬНУЮ систему логирования, а не принты. Инициализирую БД при запуске бота. Добавил команды бота на главное меню. Сделал более структурированную функцию запуска бота">
+      <option name="closed" value="true" />
+      <created>1772382528853</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1772382528853</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Почему-то ошибка с импортами стала на __init__.py почему-то пофиг">
+      <option name="closed" value="true" />
+      <created>1772387178983</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1772387178983</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Переписал команду старт, добавил туда обработку записи и сохранения пользователя в БД">
+      <option name="closed" value="true" />
+      <created>1772387226306</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1772387226306</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Исправил ошибку в связях">
+      <option name="closed" value="true" />
+      <created>1772387249580</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1772387249580</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Объявил БД, создал модели и часть запросов к ним" />
-    <option name="LAST_COMMIT_MESSAGE" value="Объявил БД, создал модели и часть запросов к ним" />
+    <MESSAGE value="Работа над запросами в БД" />
+    <MESSAGE value="Добавил запрос на активные заказы и прописал запуск бота" />
+    <MESSAGE value="Начало работы над командами бота" />
+    <MESSAGE value="Указываем модули" />
+    <MESSAGE value="Добавил для отладки время сна, добавил новый роутер для обработки запроса кнопки &quot;Помощь&quot;" />
+    <MESSAGE value="Создал файл для обработки запросов с помощью кнопки" />
+    <MESSAGE value="Создал клавиатуру главного меню" />
+    <MESSAGE value="Добавил команду help" />
+    <MESSAGE value="Работа с БД, добавил в проект миграции БД" />
+    <MESSAGE value="Исправил ошибки &quot;,&quot; -  в строках с зависимостями между таблицами" />
+    <MESSAGE value="Убрал ненужные комментарии" />
+    <MESSAGE value="Переписал файл. Сделал НОРМАЛЬНУЮ систему логирования, а не принты. Инициализирую БД при запуске бота. Добавил команды бота на главное меню. Сделал более структурированную функцию запуска бота" />
+    <MESSAGE value="Почему-то ошибка с импортами стала на __init__.py почему-то пофиг" />
+    <MESSAGE value="Переписал команду старт, добавил туда обработку записи и сохранения пользователя в БД" />
+    <MESSAGE value="Исправил ошибку в связях" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибку в связях" />
   </component>
 </project>

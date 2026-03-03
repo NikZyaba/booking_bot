@@ -4,7 +4,6 @@ from keyboards.main_menu import get_main_menu
 
 router = Router()
 
-
 @router.callback_query(lambda c: c.data == "main_menu")
 async def process_main_menu(callbacks: types.CallbackQuery):
     """Показать главное меню"""
