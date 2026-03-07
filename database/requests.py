@@ -7,6 +7,7 @@ from sqlalchemy.orm import selectinload
 from database.models import User, AsyncSessionFactory, Seat, Order
 
 
+
 # ------------------------ Работа с USER ------------------------ #
 # Создаем запросы для создания пользователя
 async def create_user(
@@ -45,6 +46,24 @@ async def update_user_phone(telegram_id: int, phone: str) -> Optional[User]:
             await session.refresh(user)
         return user
 
+async def update_user_info(telegram_id: int, first_name: Optional[str] = None, last_name: Optional[str] = None) -> Optional[User]:
+    async with AsyncSessionFactory() as session:
+        result = await session.execute(select(User).where(User.telegram_id == telegram_id))
+
+        user = result.scalar_one_or_none()
+
+        if user:
+            if first_name is not None:
+                user.first_name = first_name
+            if last_name is not None:
+                user.last_name = last_name
+
+        await session.commit()
+        await session.refresh(user)
+        # Пока импортируем внутри функции
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"✅ Информация пользователя {telegram_id} обновлена")
 
 # --------------------------------------------------------------- #
 # ------------------------ Работа с SEAT ------------------------ #
