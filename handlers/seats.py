@@ -12,7 +12,5 @@ async def cmd_show_all_seats(message: types.Message) -> None:
     await message.answer("📍 Все места в заведении:", reply_markup=keyboard)
 
 
-router.message()
-
 
 
