@@ -12,11 +12,7 @@ async def cmd_show_all_seats(message: types.Message) -> None:
     await message.answer("📍 Все места в заведении:", reply_markup=keyboard)
 
 
+router.message()
 
-# Обработчик для callback с главного меню
-@router.callback_query(lambda c: c.data == "cmd_show_all_seats")
-async def callback_show_all_seats(callback: types.CallbackQuery) -> None:
-    """Показываем все места при нажатии на кнопку в меню"""
-    keyboard = await get_seats_keyboard()
-    await callback.message.edit_text("📍 Все места в заведении:",reply_markup=keyboard)
-    await callback.answer()
+
+
