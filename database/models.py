@@ -9,6 +9,9 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, Asyn
 import os
 from dotenv import load_dotenv
 
+# Для функционала
+from datetime import date
+
 # Формат URL: postgresql+asyncpg://user:password@host:port/dbname
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -70,5 +73,8 @@ class Order(Base):
     user: Mapped["User"] = relationship("User", back_populates="orders")
     seat: Mapped["Seat"] = relationship("Seat", back_populates="orders")
 
-    order_date: Mapped[datetime] = mapped_column(server_default=func.now())  # Дата заказа
-    status: Mapped[str] = mapped_column(String(20), default="pending")  # Статус заказа
+    booking_date: Mapped[date] = mapped_column(Date, nullable=False)  # Дата бронирования
+    booking_time: Mapped[str] = mapped_column(String(5), nullable=False)  # Время (ЧЧ:ММ)
+    customer_name: Mapped[str] = mapped_column(String(50), nullable=True)  # Имя клиента
+    qr_code: Mapped[bytes] = mapped_column(LargeBinary, nullable=True)  # QR-код
+    qr_code_path: Mapped[str] = mapped_column(String(255), nullable=True)  # Путь к QR-коду
