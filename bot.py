@@ -88,10 +88,12 @@ async def main():
         from handlers.start import router as start_router
         from handlers.callbacks import router as callbacks_router
         from  handlers.seats import router as seats_router
+        from handlers.booking import router as booking_router
 
         dp.include_router(start_router)
         dp.include_router(callbacks_router)
         dp.include_router(seats_router)
+        dp.include_router(booking_router)
 
         logger.info("✅ Роутеры зарегистрированы")
     except Exception as e:
