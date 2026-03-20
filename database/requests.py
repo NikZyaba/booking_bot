@@ -159,6 +159,30 @@ async def get_available_seats() -> List[Seat]:
         result = await session.execute(select(Seat).where(Seat.is_booked == False))
         return list(result.scalars().all())
 
+
+async def get_booked_times_for_seat(seat_id: int, booking_date: date) -> List[str]:
+    """
+    Получает все забронированные времена для конкретного места на указанную дату
+
+    Args:
+        seat_id: ID места
+        booking_date: дата бронирования
+
+    Returns:
+        List[str]: список забронированных времен в формате "ЧЧ:ММ"
+    """
+    async with AsyncSessionFactory() as session:
+        # Получаем все заказы для этого места на указанную дату
+        result = await session.execute(
+            select(Order.booking_time)
+            .where(Order.seat_id == seat_id)
+            .where(Order.booking_date == booking_date)
+            .where(Order.status.in_(["pending", "confirmed"]))  # Только активные брони
+        )
+        # Возвращаем список времен
+        return [time for (time,) in result.all()]
+
+
 async def is_seat_booked(seat_id:int) -> bool:
     """Проверяем, забронировано-ли место"""
     seat = await get_seat_by_id(seat_id)

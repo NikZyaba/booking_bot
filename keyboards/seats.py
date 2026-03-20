@@ -19,6 +19,7 @@ async def get_seats_keyboard() -> InlineKeyboardMarkup:
             callback_data=f"get_seat_{seat.id}"
         )
         keyboard_buttons.append([button])
+    keyboard_buttons.append([InlineKeyboardButton(text="Главное меню", callback_data="main_menu")])
 
     return InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
 
@@ -68,6 +69,3 @@ async def get_seats_by_status_keyboard(show_booked: bool = True) -> InlineKeyboa
         keyboard_buttons.append([button])
 
     return InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
-
-
-

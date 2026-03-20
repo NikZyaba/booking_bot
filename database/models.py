@@ -78,3 +78,4 @@ class Order(Base):
     customer_name: Mapped[str] = mapped_column(String(50), nullable=True)  # Имя клиента
     qr_code: Mapped[bytes] = mapped_column(LargeBinary, nullable=True)  # QR-код
     qr_code_path: Mapped[str] = mapped_column(String(255), nullable=True)  # Путь к QR-коду
+    status: Mapped[str] = mapped_column(String(20), default="pending", nullable=False)  # Добавляем поле status

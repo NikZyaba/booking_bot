@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Исправил ошибку в связях">
-      <change afterPath="$PROJECT_DIR$/handlers/seats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keyboards/seats.py" afterDir="false" />
+    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Начал добавление функционала выбор бронирования места">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/booking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/callbacks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/main_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/booking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/seats.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/seats.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +210,63 @@
       <option name="project" value="LOCAL" />
       <updated>1772387249580</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Работа с seats (обработка запросов)">
+      <option name="closed" value="true" />
+      <created>1772563191683</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1772563191683</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Просто перенес функцию в нужный файл">
+      <option name="closed" value="true" />
+      <created>1772866000726</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1772866000726</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Добавил функцию обновления данных пользователя">
+      <option name="closed" value="true" />
+      <created>1772866037347</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1772866037347</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Обновил клавиатуру согласно ТЗ">
+      <option name="closed" value="true" />
+      <created>1772866972948</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1772866972948</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Добавил поля в таблице для создания заказов">
+      <option name="closed" value="true" />
+      <created>1772867008405</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1772867008405</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Исправил ошибку">
+      <option name="closed" value="true" />
+      <created>1772909601494</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1772909601494</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Начал добавление функционала выбор бронирования места">
+      <option name="closed" value="true" />
+      <created>1772953579171</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1772953579171</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +297,13 @@
     <MESSAGE value="Почему-то ошибка с импортами стала на __init__.py почему-то пофиг" />
     <MESSAGE value="Переписал команду старт, добавил туда обработку записи и сохранения пользователя в БД" />
     <MESSAGE value="Исправил ошибку в связях" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибку в связях" />
+    <MESSAGE value="Работа с seats (обработка запросов)" />
+    <MESSAGE value="Просто перенес функцию в нужный файл" />
+    <MESSAGE value="Добавил функцию обновления данных пользователя" />
+    <MESSAGE value="Обновил клавиатуру согласно ТЗ" />
+    <MESSAGE value="Добавил поля в таблице для создания заказов" />
+    <MESSAGE value="Исправил ошибку" />
+    <MESSAGE value="Начал добавление функционала выбор бронирования места" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начал добавление функционала выбор бронирования места" />
   </component>
 </project>
