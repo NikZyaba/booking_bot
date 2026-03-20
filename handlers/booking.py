@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, date
 from aiogram.types import CallbackQuery
 from aiogram.utils.callback_answer import CallbackAnswer
 
-from keyboards.booking import get_date_selection_keyboard, get_time_selection_keyboard, get_calendar_keyboard, get_seats_for_date_keyboard
+from keyboards.booking import get_time_selection_keyboard, get_calendar_keyboard, get_seats_for_date_keyboard
 
 router = Router()
 
