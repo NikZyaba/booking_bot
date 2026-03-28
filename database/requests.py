@@ -1,7 +1,9 @@
 from typing import Optional, List
 from datetime import date
 
-from sqlalchemy import select
+from aiogram.fsm.context import FSMContext
+from aiogram.types import CallbackQuery
+from sqlalchemy import select, update
 from sqlalchemy.orm import selectinload
 
 from database.models import User, AsyncSessionFactory, Seat, Order
@@ -96,18 +98,34 @@ async def update_seat_booking(seat_id: int, is_booked: bool) -> Optional[Seat]:
 # ---------------------------------------------------------------- #
 # ------------------------ Работа с ORDER ------------------------ #
 
-async def create_order(user_id: int, seat_id: int) -> Optional[Order]:
-    """Создаем заказ"""
-    async with AsyncSessionFactory() as session:
-        order = Order(
-            user_id=user_id,
-            seat_id=seat_id,
-            status="pending"
-        )
-        session.add(order)
-        await session.commit()
-        await session.refresh(order)
-        return order
+async def create_order(
+    user_id: int,
+    seat_id: int,
+    booking_date: Optional[date] = None,
+    booking_time: Optional[str] = None,
+    customer_name: Optional[str] = None,
+    status: str = "pending"
+) -> Optional[Order]:
+    """Создаем заказ с полными данными"""
+    try:
+        async with AsyncSessionFactory() as session:
+            order = Order(
+                user_id=user_id,
+                seat_id=seat_id,
+                booking_date=booking_date,
+                booking_time=booking_time,
+                customer_name=customer_name,
+                status=status
+            )
+            session.add(order)
+            await session.commit()
+            await session.refresh(order)
+            return order
+    except Exception as e:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.error(f"Ошибка при создании заказа: {e}", exc_info=True)
+        return None
 
 
 async def get_user_orders(user_id: int) -> List[Order]:

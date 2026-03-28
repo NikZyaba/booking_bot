@@ -1,4 +1,4 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 from datetime import datetime, date, timedelta
 import calendar
 from database.requests import get_booked_times_for_seat
@@ -178,3 +178,31 @@ def get_calendar_keyboard(year: int = None, month: int = None) -> InlineKeyboard
     keyboard.append(nav_row)
 
     return InlineKeyboardMarkup(inline_keyboard=keyboard)
+
+def get_booking_confirmation_keyboard() -> InlineKeyboardMarkup:
+    """Клавиатура подтверждения"""
+    confirmation_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="✅ Подтвердить", callback_data="confirm_booking"),
+            InlineKeyboardButton(text="✏️ Изменить время", callback_data="back_to_times")
+        ],
+        [
+            InlineKeyboardButton(text="🪑 Другое место", callback_data="back_to_seats"),
+            InlineKeyboardButton(text="📅 Другая дата", callback_data="back_to_date")
+        ],
+        [
+            InlineKeyboardButton(text="❌ Отменить", callback_data="cancel_booking")
+        ]
+    ])
+    return confirmation_keyboard
+
+def get_contact_keyboard() -> ReplyKeyboardMarkup:
+    """Клавиатура для отправки контакта"""
+    contact_keyboard = ReplyKeyboardMarkup(
+        keyboard=[
+            [KeyboardButton(text="📱 Отправить номер телефона", request_contact=True)]
+        ],
+        resize_keyboard=True,
+        one_time_keyboard=True
+    )
+    return contact_keyboard

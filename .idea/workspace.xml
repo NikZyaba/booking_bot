@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Начал добавление функционала выбор бронирования места">
+    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Не убрал лишний импорт">
+      <change afterPath="$PROJECT_DIR$/qr/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qr/create_booking_order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/booking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/callbacks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keyboards/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/booking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/seats.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/seats.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772953579171</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Работа над ошибками: выбор даты (создание заказа)">
+      <option name="closed" value="true" />
+      <created>1774025237225</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1774025237225</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Не убрал лишний импорт">
+      <option name="closed" value="true" />
+      <created>1774025295772</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1774025295772</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,6 +319,8 @@
     <MESSAGE value="Добавил поля в таблице для создания заказов" />
     <MESSAGE value="Исправил ошибку" />
     <MESSAGE value="Начал добавление функционала выбор бронирования места" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал добавление функционала выбор бронирования места" />
+    <MESSAGE value="Работа над ошибками: выбор даты (создание заказа)" />
+    <MESSAGE value="Не убрал лишний импорт" />
+    <option name="LAST_COMMIT_MESSAGE" value="Не убрал лишний импорт" />
   </component>
 </project>
