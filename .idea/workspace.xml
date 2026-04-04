@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Не убрал лишний импорт">
-      <change afterPath="$PROJECT_DIR$/qr/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qr/create_booking_order.py" afterDir="false" />
+    <list default="true" id="412d1469-aad1-4889-b786-255673a6a5a3" name="Changes" comment="Завершил процесс бронирования мест">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/booking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/booking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/callbacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/seats.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/seats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/seats.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/seats.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774025295772</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Завершил процесс бронирования мест">
+      <option name="closed" value="true" />
+      <created>1774682382695</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1774682382695</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +302,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Объявил БД, создал модели и часть запросов к ним" />
     <MESSAGE value="Работа над запросами в БД" />
     <MESSAGE value="Добавил запрос на активные заказы и прописал запуск бота" />
     <MESSAGE value="Начало работы над командами бота" />
@@ -321,6 +326,7 @@
     <MESSAGE value="Начал добавление функционала выбор бронирования места" />
     <MESSAGE value="Работа над ошибками: выбор даты (создание заказа)" />
     <MESSAGE value="Не убрал лишний импорт" />
-    <option name="LAST_COMMIT_MESSAGE" value="Не убрал лишний импорт" />
+    <MESSAGE value="Завершил процесс бронирования мест" />
+    <option name="LAST_COMMIT_MESSAGE" value="Завершил процесс бронирования мест" />
   </component>
 </project>

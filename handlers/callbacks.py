@@ -35,9 +35,8 @@ async def process_help(callbacks: types.CallbackQuery):
 @router.callback_query(lambda c: c.data == "cmd_show_all_seats")
 async def callback_show_all_seats(callback: types.CallbackQuery) -> None:
     """Показываем все места при нажатии на кнопку в меню"""
-    keyboard = await get_seats_keyboard()
-    await callback.message.edit_text(
-        text="📍 **Все места в заведении:**", reply_markup=keyboard, parse_mode="Markdown")
+    from handlers.seats import cmd_show_all_seats
+    await cmd_show_all_seats(callback.message)
     await callback.answer()
 
 

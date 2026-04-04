@@ -69,3 +69,24 @@ async def get_seats_by_status_keyboard(show_booked: bool = True) -> InlineKeyboa
         keyboard_buttons.append([button])
 
     return InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
+
+
+def get_seat_info_keyboard(seat_id: int) -> InlineKeyboardMarkup:
+    """
+    Создает клавиатуру для возврата из детального просмотра места
+    """
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(
+                text="🔙 Назад к списку мест",
+                callback_data="back_to_seats_list"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="🏠 Главное меню",
+                callback_data="main_menu"
+            )
+        ]
+    ])
+    return keyboard
